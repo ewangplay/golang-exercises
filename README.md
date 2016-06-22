@@ -2,5 +2,5 @@
 
 |题目|说明|
 |----|----|
-|helloword|第一个练习题目|
+|[hello-world](./hello-world/hello_world.go)|第一个练习题目|
 
