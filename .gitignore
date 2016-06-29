@@ -1,0 +1,8 @@
+tags
+*.o
+*.swp
+cscope.*
+*.class
+*/bin/*
+*/pkg/*
+
