@@ -1,6 +1,7 @@
-# 学习golang过程的练习题
+# golang exercises
 
-|题目|说明|
+|topic|description|
 |----|----|
-|[hello-world](./hello-world/hello_world.go)|第一个练习题目|
+|[hello-world](./hello-world/hello_world.go)|first golang sample: hello-world|
+|[if-test](./if-test/if_test.go)|if statement test sample|
 
