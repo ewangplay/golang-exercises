@@ -6,7 +6,8 @@
 |[if-test](./if-test/if_test.go)|if statement test sample|
 |[switch-test](./switch-test/switch_test.go)|switch statement test sample|
 |[for-test](./for-test/for_test.go)|for statement test sample|
-|[map-test](./map-test/map_test.go)|map collection test sample|
-|[map-assert](./map-assert/map_assert.go)|map collection assertion sample|
+|[slice-test](./slice-test/slice_test.go)|slice test sample|
+|[map-test](./map-test/map_test.go)|map test sample|
+|[map-assert](./map-assert/map_assert.go)|map assertion sample|
 |[interface-test](./interface-test/interface_test.go)|interface test sample|
 
