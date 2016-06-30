@@ -7,4 +7,5 @@
 |[for-test](./for-test/for_test.go)|for statement test sample|
 |[map-test](./map-test/map_test.go)|map collection test sample|
 |[map-assert](./map-assert/map_assert.go)|map collection assertion sample|
+|[interface-test](./interface-test/interface_test.go)|interface test sample|
 
