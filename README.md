@@ -10,6 +10,7 @@
 |[map-test](./map-test/map_test.go)|map test sample|
 |[map-assert](./map-assert/map_assert.go)|map assertion sample|
 |[interface-test](./interface-test/interface_test.go)|interface test sample|
+|[channel-test](./channel-test/channel_test.go)|channel test sample|
 |[generic-function](./generic-function/generic_func.go)|generic function sample|
 |[dynamic-function](./dynamic-function/dynamic_func.go)|dynamic function sample|
 
