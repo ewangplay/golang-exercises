@@ -13,4 +13,5 @@
 |[channel-test](./channel-test/channel_test.go)|channel test sample|
 |[generic-function](./generic-function/generic_func.go)|generic function sample|
 |[dynamic-function](./dynamic-function/dynamic_func.go)|dynamic function sample|
+|[panic-recover](./panic-recover/sample1.go)|panic recover sample|
 
