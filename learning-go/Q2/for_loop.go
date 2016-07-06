@@ -1,5 +1,5 @@
 /* 
-<<Learning Go>> exercises Q2:
+<<Learning Go>> Q2:
 For-loop:
 1. Create a simple loop with the for construct. Make it loop 10 times and print out the loop counter with the fmt package.
 2. Rewrite the loop from 1. to use goto. The keyword for may not be used.
