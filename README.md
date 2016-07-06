@@ -19,6 +19,7 @@
 "Learning Go" is a e-book for golang, please refer to it.
 |topic|description|
 |----|----|
-|[Q2](./learning-go/Q2/for_loop.go)|for-loop exercise|
+|[Q2](./learning-go/Q2/for_loop.go)|For-loop exercise|
 |[Q3](./learning-go/Q3/FizzBuzz.go)|FizzBuzz exercise|
+|[Q4](./learning-go/Q4/strings.go)|Strings exercise|
 
