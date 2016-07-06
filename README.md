@@ -15,3 +15,9 @@
 |[dynamic-function](./dynamic-function/dynamic_func.go)|dynamic function sample|
 |[panic-recover](./panic-recover/sample1.go)|panic recover sample|
 
+# learning go
+"Learning Go" is a e-book for golang, please refer to it.
+|topic|description|
+|----|----|
+|[Q2](./learning-go/Q2/for_loop.go)|for-loop exercise|
+
