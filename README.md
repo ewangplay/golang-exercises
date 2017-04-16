@@ -16,10 +16,20 @@
 |[panic-recover](./panic-recover/sample1.go)|panic recover sample|
 
 # learning go
-"Learning Go" is a e-book for golang, please refer to it.
+
+`Learning Go` is a primer ebook for studying golang, please refer to it.
+
 |topic|description|
 |----|----|
 |[Q2](./learning-go/Q2/for_loop.go)|For-loop exercise|
 |[Q3](./learning-go/Q3/FizzBuzz.go)|FizzBuzz exercise|
 |[Q4](./learning-go/Q4/strings.go)|Strings exercise|
+
+# gopl
+
+`gopl` refers to "The Go Programming Language" book, written by `Alan A.A.Donovan` and `Brian W.Kernighan`. 
+
+|topic|description|
+|----|----|
+|[intset](./gopl/ch6/intset/intset.go)|An non-negativ integers set sample|
 
