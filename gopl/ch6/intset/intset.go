@@ -142,7 +142,7 @@ func (s *IntSet) DifferenceWith(t *IntSet) {
 
 		for j := 0; j < 64; j++ {
 			if s.words[i]&(1<<uint(j)) != 0 && t.words[i]&(1<<uint(j)) != 0 {
-				s.words[i] &= ^(1<<uint(j))
+				s.words[i] &= ^(1 << uint(j))
 			}
 		}
 	}
@@ -150,13 +150,31 @@ func (s *IntSet) DifferenceWith(t *IntSet) {
 
 //Symmetricdifferencewith sets to the symmetric difference of s and t
 func (s *IntSet) SymmetricDifferenceWith(t *IntSet) {
-    s1 := s.Copy()
-    s1.DifferenceWith(t)
+	s1 := s.Copy()
+	s1.DifferenceWith(t)
 
-    s2 := t.Copy()
-    s2.DifferenceWith(s)
+	s2 := t.Copy()
+	s2.DifferenceWith(s)
 
-    s1.UnionWith(s2)
+	s1.UnionWith(s2)
 
-    s.words = s1.words
+	s.words = s1.words
+}
+
+//Elems returns the values list of s
+func (s *IntSet) Elems() []int {
+    var elems []int
+
+	for i, word := range s.words {
+		if word == 0 {
+			continue
+		}
+		for j := 0; j < 64; j++ {
+			if word&(1<<uint(j)) != 0 {
+				elems = append(elems, i*64+j)
+			}
+		}
+	}
+
+    return elems
 }

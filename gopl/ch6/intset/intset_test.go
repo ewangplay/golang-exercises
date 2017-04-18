@@ -1,7 +1,7 @@
 package intset
 
 import (
-	_ "fmt"
+	"fmt"
 	"testing"
 )
 
@@ -102,7 +102,7 @@ func TestAddAll(t *testing.T) {
 
 //Test IntersectWith method
 func TestIntersectWith(t *testing.T) {
-    s2.Clear()
+	s2.Clear()
 	s2.AddAll(9, 50, 6, 200, 10, 55)
 
 	t.Logf("Set s2: %v\n", &s2)
@@ -118,7 +118,7 @@ func TestIntersectWith(t *testing.T) {
 
 //Test DifferenceWith method
 func TestDifferenceWith(t *testing.T) {
-    s.Clear()
+	s.Clear()
 	s.AddAll(299, 55, 2, 54, 10, 55, 69)
 	s.DifferenceWith(&s2)
 
@@ -131,7 +131,7 @@ func TestDifferenceWith(t *testing.T) {
 
 //Test SymmetricDifferenceWith method
 func TestSymmetricDifferenceWith(t *testing.T) {
-    s.Clear()
+	s.Clear()
 	s.AddAll(299, 55, 2, 54, 10, 55, 69)
 	s.SymmetricDifferenceWith(&s2)
 
@@ -140,4 +140,21 @@ func TestSymmetricDifferenceWith(t *testing.T) {
 	}
 
 	t.Logf("Set s: %v\n", &s)
+}
+
+//Test Elems method
+func TestElems(t *testing.T) {
+	elems := s.Elems()
+
+	for i, v := range elems {
+		if i == 0 {
+			fmt.Print("[")
+		}
+		fmt.Print(v)
+		if i != len(elems)-1 {
+			fmt.Print(" ")
+		} else {
+			fmt.Println("]")
+		}
+	}
 }
