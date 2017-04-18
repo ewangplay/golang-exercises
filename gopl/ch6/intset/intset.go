@@ -5,15 +5,17 @@ import (
 	"fmt"
 )
 
+const UINT_SIZE = 32<<(^uint(0)>>63)
+
 //An IntSet is a set of small non-negative integers
 //Its zero value represents the empty set
 type IntSet struct {
-	words []uint64
+	words []uint
 }
 
 //Has reports whether the set contains the integer value x
 func (s *IntSet) Has(x int) bool {
-	index, bit := x/64, x%64
+	index, bit := x/UINT_SIZE, x%UINT_SIZE
 	if len(s.words) > 0 {
 		return index < len(s.words) && s.words[index]&(1<<uint(bit)) != 0
 	}
@@ -22,7 +24,7 @@ func (s *IntSet) Has(x int) bool {
 
 //Add adds the specified integer x to the set
 func (s *IntSet) Add(x int) {
-	index, bit := x/64, x%64
+	index, bit := x/UINT_SIZE, x%UINT_SIZE
 	for index >= len(s.words) {
 		s.words = append(s.words, 0)
 	}
@@ -31,7 +33,7 @@ func (s *IntSet) Add(x int) {
 
 //Remove removes the integer x from the set
 func (s *IntSet) Remove(x int) {
-	index, bit := x/64, x%64
+	index, bit := x/UINT_SIZE, x%UINT_SIZE
 	if index < len(s.words) {
 		s.words[index] &= ^(1 << uint(bit))
 	}
@@ -45,7 +47,7 @@ func (s *IntSet) Len() int {
 		if word == 0 {
 			continue
 		}
-		for j := 0; j < 64; j++ {
+		for j := 0; j < UINT_SIZE; j++ {
 			if word&(1<<uint(j)) != 0 {
 				sum += 1
 			}
@@ -76,12 +78,12 @@ func (s *IntSet) String() string {
 		if word == 0 {
 			continue
 		}
-		for j := 0; j < 64; j++ {
+		for j := 0; j < UINT_SIZE; j++ {
 			if word&(1<<uint(j)) != 0 {
 				if buf.Len() > len("{") {
 					buf.WriteByte(' ')
 				}
-				fmt.Fprintf(&buf, "%d", i*64+j)
+				fmt.Fprintf(&buf, "%d", i*UINT_SIZE+j)
 			}
 		}
 	}
@@ -112,14 +114,14 @@ func (s *IntSet) AddAll(values ...int) {
 
 //Intersectwith sets s to the intersection of s and t
 func (s *IntSet) IntersectWith(t *IntSet) {
-	var new_set []uint64
+	var new_set []uint
 
 	for i := 0; i < len(s.words) && i < len(t.words); i++ {
 		if s.words[i] == 0 || t.words[i] == 0 {
 			continue
 		}
 
-		for j := 0; j < 64; j++ {
+		for j := 0; j < UINT_SIZE; j++ {
 			if s.words[i]&(1<<uint(j)) != 0 && t.words[i]&(1<<uint(j)) != 0 {
 				for i >= len(new_set) {
 					new_set = append(new_set, 0)
@@ -140,7 +142,7 @@ func (s *IntSet) DifferenceWith(t *IntSet) {
 			continue
 		}
 
-		for j := 0; j < 64; j++ {
+		for j := 0; j < UINT_SIZE; j++ {
 			if s.words[i]&(1<<uint(j)) != 0 && t.words[i]&(1<<uint(j)) != 0 {
 				s.words[i] &= ^(1 << uint(j))
 			}
@@ -169,9 +171,9 @@ func (s *IntSet) Elems() []int {
 		if word == 0 {
 			continue
 		}
-		for j := 0; j < 64; j++ {
+		for j := 0; j < UINT_SIZE; j++ {
 			if word&(1<<uint(j)) != 0 {
-				elems = append(elems, i*64+j)
+				elems = append(elems, i*UINT_SIZE+j)
 			}
 		}
 	}
