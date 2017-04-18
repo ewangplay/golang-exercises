@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-var s,s2 IntSet
+var s, s2 IntSet
 
 //Test Add method
 func TestAdd(t *testing.T) {
@@ -98,4 +98,19 @@ func TestAddAll(t *testing.T) {
 	if s.Len() != 6 {
 		t.Fail()
 	}
+}
+
+//Test IntersectWith method
+func TestIntersectWith(t *testing.T) {
+	s2.AddAll(9, 50, 6, 200, 10, 55)
+
+	t.Logf("Set s2: %v\n", &s2)
+
+	s.IntersectWith(&s2)
+
+	if s.Len() != 2 {
+		t.Fail()
+	}
+
+	t.Logf("Set s: %v\n", &s)
 }

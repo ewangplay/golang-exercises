@@ -57,13 +57,13 @@ func (s *IntSet) Len() int {
 
 //Unionwith sets s to the union of s and t
 func (s *IntSet) UnionWith(t *IntSet) {
-    var i int
-    for ; i<len(s.words) && i<len(t.words); i++ {
-        s.words[i] |= t.words[i]
-    }
-    if i < len(t.words) {
-        s.words = append(s.words, t.words[i:]...)
-    }
+	var i int
+	for ; i < len(s.words) && i < len(t.words); i++ {
+		s.words[i] |= t.words[i]
+	}
+	if i < len(t.words) {
+		s.words = append(s.words, t.words[i:]...)
+	}
 }
 
 //String returns the set as a string of form "{1, 2, 3}"
@@ -93,20 +93,41 @@ func (s *IntSet) String() string {
 
 //Clear removes all the elements from the set
 func (s *IntSet) Clear() {
-    s.words = nil
+	s.words = nil
 }
 
 //Copy returns a copy of the set
 func (s *IntSet) Copy() *IntSet {
-    var t IntSet
-    t.words = append(t.words, s.words...)
+	var t IntSet
+	t.words = append(t.words, s.words...)
 	return &t
 }
 
 //Addall adds a list of values, such as s.Addall(1, 2, 3)
 func (s *IntSet) AddAll(values ...int) {
-    for _, v := range values {
-        s.Add(v)
-    }
+	for _, v := range values {
+		s.Add(v)
+	}
 }
 
+//Intersectwith sets s to the intersection of s and t
+func (s *IntSet) IntersectWith(t *IntSet) {
+	var new_set []uint64
+
+	for i := 0; i < len(s.words) && i < len(t.words); i++ {
+		if s.words[i] == 0 || t.words[i] == 0 {
+			continue
+		}
+
+		for j := 0; j < 64; j++ {
+			if s.words[i]&(1<<uint(j)) != 0 && t.words[i]&(1<<uint(j)) != 0 {
+				for i >= len(new_set) {
+					new_set = append(new_set, 0)
+				}
+				new_set[i] |= 1 << uint(j)
+			}
+		}
+	}
+
+    s.words = new_set
+}
