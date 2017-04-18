@@ -88,3 +88,14 @@ func TestClear(t *testing.T) {
 		t.Fail()
 	}
 }
+
+//Test AddAll method
+func TestAddAll(t *testing.T) {
+	s.AddAll(299, 55, 2, 54, 10, 55, 69)
+
+	t.Logf("Set s:%v\n", &s)
+
+	if s.Len() != 6 {
+		t.Fail()
+	}
+}

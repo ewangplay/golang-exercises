@@ -102,3 +102,11 @@ func (s *IntSet) Copy() *IntSet {
     t.words = append(t.words, s.words...)
 	return &t
 }
+
+//Addall adds a list of values, such as s.Addall(1, 2, 3)
+func (s *IntSet) AddAll(values ...int) {
+    for _, v := range values {
+        s.Add(v)
+    }
+}
+
