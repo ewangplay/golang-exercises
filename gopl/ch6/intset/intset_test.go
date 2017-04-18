@@ -102,6 +102,7 @@ func TestAddAll(t *testing.T) {
 
 //Test IntersectWith method
 func TestIntersectWith(t *testing.T) {
+    s2.Clear()
 	s2.AddAll(9, 50, 6, 200, 10, 55)
 
 	t.Logf("Set s2: %v\n", &s2)
@@ -109,6 +110,19 @@ func TestIntersectWith(t *testing.T) {
 	s.IntersectWith(&s2)
 
 	if s.Len() != 2 {
+		t.Fail()
+	}
+
+	t.Logf("Set s: %v\n", &s)
+}
+
+//Test DifferenceWith method
+func TestDifferenceWith(t *testing.T) {
+    s.Clear()
+	s.AddAll(299, 55, 2, 54, 10, 55, 69)
+	s.DifferenceWith(&s2)
+
+	if s.Len() != 4 {
 		t.Fail()
 	}
 

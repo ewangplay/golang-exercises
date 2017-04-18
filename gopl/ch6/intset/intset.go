@@ -129,5 +129,21 @@ func (s *IntSet) IntersectWith(t *IntSet) {
 		}
 	}
 
-    s.words = new_set
+	s.words = new_set
+}
+
+//Differencewith sets s to the difference of s and t
+func (s *IntSet) DifferenceWith(t *IntSet) {
+
+	for i := 0; i < len(s.words) && i < len(t.words); i++ {
+		if s.words[i] == 0 || t.words[i] == 0 {
+			continue
+		}
+
+		for j := 0; j < 64; j++ {
+			if s.words[i]&(1<<uint(j)) != 0 && t.words[i]&(1<<uint(j)) != 0 {
+				s.words[i] &= ^(1<<uint(j))
+			}
+		}
+	}
 }
