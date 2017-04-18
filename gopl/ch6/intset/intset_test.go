@@ -128,3 +128,16 @@ func TestDifferenceWith(t *testing.T) {
 
 	t.Logf("Set s: %v\n", &s)
 }
+
+//Test SymmetricDifferenceWith method
+func TestSymmetricDifferenceWith(t *testing.T) {
+    s.Clear()
+	s.AddAll(299, 55, 2, 54, 10, 55, 69)
+	s.SymmetricDifferenceWith(&s2)
+
+	if s.Len() != 8 {
+		t.Fail()
+	}
+
+	t.Logf("Set s: %v\n", &s)
+}

@@ -147,3 +147,16 @@ func (s *IntSet) DifferenceWith(t *IntSet) {
 		}
 	}
 }
+
+//Symmetricdifferencewith sets to the symmetric difference of s and t
+func (s *IntSet) SymmetricDifferenceWith(t *IntSet) {
+    s1 := s.Copy()
+    s1.DifferenceWith(t)
+
+    s2 := t.Copy()
+    s2.DifferenceWith(s)
+
+    s1.UnionWith(s2)
+
+    s.words = s1.words
+}
