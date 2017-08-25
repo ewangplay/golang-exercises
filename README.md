@@ -14,6 +14,15 @@
 |[generic-function](./generic-function/generic_func.go)|generic function sample|
 |[dynamic-function](./dynamic-function/dynamic_func.go)|dynamic function sample|
 |[panic-recover](./panic-recover/sample1.go)|panic recover sample|
+|[amqp-simple-mode](./amqp-test/01-simple-mode/)|amqp simple mode sample|
+|[amqp-work-queue-mode](./amqp-test/02-work-queues/)|amqp work queue mode sample|
+|[amqp-fanout-mode](./amqp-test/03-fanout/)|amqp fanout mode sample|
+|[amqp-direct-route-mode](./amqp-test/04-direct-route/)|amqp direct route mode sample|
+|[amqp-topic-route-mode](./amqp-test/05-topic-route/)|amqp topic route mode sample|
+|[amqp-rpc-mode](./amqp-test/06-rpc-demo/)|amqp rpc mode sample|
+|[base64-encode](./base64-test/base64test.go)|base64 encoding sample|
+|[regular-expression](./regexp/main.geo)|regular expression sample|
+|[type-assert](./type-assert/main.go)|type assertion sample|
 
 # learning go
 
@@ -32,4 +41,5 @@
 |topic|description|
 |----|----|
 |[intset](./gopl/ch6/intset/intset.go)|An non-negativ integers set sample|
+|[counter](./gopl/ch7/counter/counter.go)|Byte Counter, Word Counter, Line Counter implement satisfied to Writer Interface|
 
