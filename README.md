@@ -23,6 +23,7 @@
 |[base64-encode](./base64-test/base64test.go)|base64 encoding sample|
 |[regular-expression](./regexp/main.geo)|regular expression sample|
 |[type-assert](./type-assert/main.go)|type assertion sample|
+|[xml-test](./xml-test/main.go)|xml decoding sample|
 |[fabcar-sample](./fabcar-sample/fabcar.go)|Hyperledger Fabric 2.2 Fabcar Sample|
 
 # learning go
