@@ -25,6 +25,7 @@
 |[type-assert](./type-assert/main.go)|type assertion sample|
 |[xml-test](./xml-test/main.go)|xml decoding sample|
 |[type-size](./type-size/main.go)|golagn type size evaluation|
+|[sego-test](./sego/main.go)|sego word segment test|
 |[fabcar-sample](./fabcar-sample/fabcar.go)|Hyperledger Fabric 2.2 Fabcar Sample|
 
 # learning go
