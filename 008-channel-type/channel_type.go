@@ -12,7 +12,7 @@ func main() {
 	c = make(chan int)
 	go job("study", 2)
 	go job("work", 3)
-	fmt.Println("I am waiting, but not tool long.")
+	fmt.Println("I'm waiting, but don't keep me waiting too long.")
 	<-c
 	<-c
 }

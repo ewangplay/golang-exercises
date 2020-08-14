@@ -1,16 +1,16 @@
 # golang exercises
 
-|topic|description|
-|----|----|
-|[hello-world](./hello-world/hello_world.go)|first golang sample: hello-world|
-|[if-test](./if-test/if_test.go)|if statement test sample|
-|[switch-test](./switch-test/switch_test.go)|switch statement test sample|
-|[for-test](./for-test/for_test.go)|for statement test sample|
-|[slice-test](./slice-test/slice_test.go)|slice test sample|
-|[map-test](./map-test/map_test.go)|map test sample|
+|NO.|Sample|Description|
+|----|----|----|
+|001|[hello-world](./001-hello-world/hello_world.go)|first sample: hello,world!|
+|002|[if-statement](./002-if-statement/if_statement.go)|if statement sample|
+|003|[switch-statement](./003-switch-statement/switch_statement.go)|switch statement sample|
+|004|[for-statement](./004-for-statement/for_statement.go)|for statement sample|
+|005|[slice-type](./005-slice-type/slice_type.go)|slice data type sample|
+|006|[map-type](./006-map-type/map_type.go)|map data type sample|
+|007|[interface-type](./007-interface-type/interface_type.go)|interface type sample|
+|008|[channel-type](./008-channel-type/channel_type.go)|channel type sample|
 |[map-assert](./map-assert/map_assert.go)|map assertion sample|
-|[interface-test](./interface-test/interface_test.go)|interface test sample|
-|[channel-test](./channel-test/channel_test.go)|channel test sample|
 |[generic-function](./generic-function/generic_func.go)|generic function sample|
 |[dynamic-function](./dynamic-function/dynamic_func.go)|dynamic function sample|
 |[panic-recover](./panic-recover/sample1.go)|panic recover sample|
