@@ -10,9 +10,13 @@
 |006|[map-type](./006-map-type/map_type.go)|map data type sample|
 |007|[interface-type](./007-interface-type/interface_type.go)|interface type sample|
 |008|[channel-type](./008-channel-type/channel_type.go)|channel type sample|
+|009|[class-inheric](./009-class-inherit/class_inherit.go)|class inheritance sample|
+|010|[generic-function](./010-generic-function/generic_function.go)|generic function sample|
+|011|[dynamic-function](./011-dynamic-function/dynamic_function.go)|dynamic function sample|
+|012|[type-size](./012-type-size/type_size.go)|type size evaluation sample|
+|013|[type-assert](./013-type-assert/type_assert.go)|type assertion sample|
+|014|[interface-trap](./014-interface-trap/interface_trap.go)|an interface trap sample|
 |[map-assert](./map-assert/map_assert.go)|map assertion sample|
-|[generic-function](./generic-function/generic_func.go)|generic function sample|
-|[dynamic-function](./dynamic-function/dynamic_func.go)|dynamic function sample|
 |[panic-recover](./panic-recover/sample1.go)|panic recover sample|
 |[amqp-simple-mode](./amqp-test/01-simple-mode/)|amqp simple mode sample|
 |[amqp-work-queue-mode](./amqp-test/02-work-queues/)|amqp work queue mode sample|
@@ -22,9 +26,7 @@
 |[amqp-rpc-mode](./amqp-test/06-rpc-demo/)|amqp rpc mode sample|
 |[base64-encode](./base64-test/base64test.go)|base64 encoding sample|
 |[regular-expression](./regexp/main.geo)|regular expression sample|
-|[type-assert](./type-assert/main.go)|type assertion sample|
 |[xml-test](./xml-test/main.go)|xml decoding sample|
-|[type-size](./type-size/main.go)|golagn type size evaluation|
 |[sego-test](./sego/main.go)|sego word segment test|
 |[fabcar-sample](./fabcar-sample/fabcar.go)|Hyperledger Fabric 2.2 Fabcar Sample|
 
