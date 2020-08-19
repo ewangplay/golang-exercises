@@ -11,9 +11,22 @@ import (
 var logg *log.Logger
 var wg sync.WaitGroup
 
+func main() {
+	logg = log.New(os.Stdout, "", log.Ltime)
+	someHandler()
+	logg.Printf("exit...")
+}
+
+/*
+context.WithDeadline:
+
+The returned context's Done channel is closed when the deadline expires, 
+when the returned cancel function is called, or when the parent context's 
+Done channel is closed, whichever happens first.
+*/
 func someHandler() {
 	// Create the ctx with deadline
-	//ctx, _ := context.WithTimeout(context.Background(), time.Second*5)
+	// ctx, _ := context.WithTimeout(context.Background(), time.Second*5)
 	ctx, _ := context.WithDeadline(context.Background(), time.Now().Add(time.Second*5))
 
 	// Do some stuff
@@ -37,10 +50,4 @@ func doStuff(ctx context.Context) {
 			logg.Printf("work...")
 		}
 	}
-}
-
-func main() {
-	logg = log.New(os.Stdout, "", log.Ltime)
-	someHandler()
-	logg.Printf("exit...")
 }

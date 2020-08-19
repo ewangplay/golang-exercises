@@ -16,6 +16,10 @@
 |012|[type-size](./012-type-size/type_size.go)|type size evaluation sample|
 |013|[type-assert](./013-type-assert/type_assert.go)|type assertion sample|
 |014|[interface-trap](./014-interface-trap/interface_trap.go)|an interface trap sample|
+|015|[time-ticker](./015-time-ticker/time_ticker.go)|time ticker sample|
+|016|[channel-close](./016-channel-close/channel_close.go)|the behavior of closed channel sample|
+|017|[panic-recover](./017-panic-recover/panic_recover.go)|panic recover sample|
+|018|[net-context](./018-net-context/with_cancel.go)|net context with cancel / deadline / timeout samples|
 |[map-assert](./map-assert/map_assert.go)|map assertion sample|
 |[panic-recover](./panic-recover/sample1.go)|panic recover sample|
 |[amqp-simple-mode](./amqp-test/01-simple-mode/)|amqp simple mode sample|
