@@ -1,4 +1,4 @@
-module github.com/ewangplay/golang-exercises/fabric-ca-client
+module github.com/ewangplay/golang-exercises/pkgs/msp
 
 go 1.14
 

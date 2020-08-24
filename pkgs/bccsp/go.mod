@@ -1,4 +1,4 @@
-module github.com/ewangplay/golang-exercises/bc-csp
+module github.com/ewangplay/golang-exercises/pkgs/bccsp
 
 go 1.14
 

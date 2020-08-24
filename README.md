@@ -1,4 +1,6 @@
-# golang exercises
+# Golang Exercises
+
+## Basic Exercises
 
 |NO.|Sample|Description|
 |----|----|----|
@@ -20,36 +22,42 @@
 |016|[channel-close](./016-channel-close/channel_close.go)|the behavior of closed channel sample|
 |017|[panic-recover](./017-panic-recover/panic_recover.go)|panic recover sample|
 |018|[net-context](./018-net-context/with_cancel.go)|net context with cancel / deadline / timeout samples|
-|[map-assert](./map-assert/map_assert.go)|map assertion sample|
-|[panic-recover](./panic-recover/sample1.go)|panic recover sample|
-|[amqp-simple-mode](./amqp-test/01-simple-mode/)|amqp simple mode sample|
-|[amqp-work-queue-mode](./amqp-test/02-work-queues/)|amqp work queue mode sample|
-|[amqp-fanout-mode](./amqp-test/03-fanout/)|amqp fanout mode sample|
-|[amqp-direct-route-mode](./amqp-test/04-direct-route/)|amqp direct route mode sample|
-|[amqp-topic-route-mode](./amqp-test/05-topic-route/)|amqp topic route mode sample|
-|[amqp-rpc-mode](./amqp-test/06-rpc-demo/)|amqp rpc mode sample|
-|[base64-encode](./base64-test/base64test.go)|base64 encoding sample|
-|[regular-expression](./regexp/main.geo)|regular expression sample|
-|[xml-test](./xml-test/main.go)|xml decoding sample|
-|[sego-test](./sego/main.go)|sego word segment test|
-|[fabcar-sample](./fabcar-sample/fabcar.go)|Hyperledger Fabric 2.2 Fabcar Sample|
+|019|[map-assert](./019-map-assert/map_assert.go)|map assertion sample|
+|020|[goroutine-pool](./020-goroutine-pool/goroutine_pool.go)|goroutine pool sample|
 
-# learning go
+## PKG Exercises
+|PKG Sample|Description|
+|----|----|----|
+|[amqp-simple-mode](./pkgs/amqp/01-simple-mode/)|amqp simple mode sample|
+|[amqp-work-queue-mode](./pkgs/amqp/02-work-queues/)|amqp work queue mode sample|
+|[amqp-fanout-mode](./pkgs/amqp/03-fanout/)|amqp fanout mode sample|
+|[amqp-direct-route-mode](./pkgs/amqp/04-direct-route/)|amqp direct route mode sample|
+|[amqp-topic-route-mode](./pkgs/amqp/05-topic-route/)|amqp topic route mode sample|
+|[amqp-rpc-mode](./pkgs/amqp/06-rpc-demo/)|amqp rpc mode sample|
+|[base64](./pkgs/base64/)|base64 encoding/decoding sample|
+|[regexp](./pkgs/regexp/main.geo)|regular expression sample|
+|[xml](./pkgs/xml/main.go)|xml decoding sample|
+|[sego](./pkgs/sego/main.go)|sego word segment sample|
+|[fabcar](./pkgs/fabcar/fabcar.go)|Hyperledger Fabric v2.2 Fabcar Sample|
+|[bccsp](./pkgs/bccsp/bccsp.go)|Hyperledger fabric bccsp package sample|
+|[msp](./pkgs/msp/msp.go)|Hyperledger fabric-sdk-go msp package sample|
+
+## Learning Go
 
 `Learning Go` is a primer ebook for studying golang, please refer to it.
 
-|topic|description|
-|----|----|
-|[Q2](./learning-go/Q2/for_loop.go)|For-loop exercise|
-|[Q3](./learning-go/Q3/FizzBuzz.go)|FizzBuzz exercise|
-|[Q4](./learning-go/Q4/strings.go)|Strings exercise|
+|Chapter|Topic|Description|
+|----|----|----|
+|Q2|[for-loop](./learning-go/Q2/for_loop.go)|For-loop exercise|
+|Q3|[FizzBuzz](./learning-go/Q3/FizzBuzz.go)|FizzBuzz exercise|
+|Q4|[strings](./learning-go/Q4/strings.go)|Strings exercise|
 
-# gopl
+# GOPL
 
-`gopl` refers to "The Go Programming Language" book, written by `Alan A.A.Donovan` and `Brian W.Kernighan`. 
+`GOPL` refers to "The Go Programming Language" book, written by `Alan A.A.Donovan` and `Brian W.Kernighan`. 
 
-|topic|description|
-|----|----|
-|[intset](./gopl/ch6/intset/intset.go)|An non-negativ integers set sample|
-|[counter](./gopl/ch7/counter/counter.go)|Byte Counter, Word Counter, Line Counter implement satisfied to Writer Interface|
+|Chaper|Topic|Description|
+|----|----|----|
+|ch6|[intset](./gopl/ch6/intset/intset.go)|A non-negativ integer set sample|
+|ch7|[counter](./gopl/ch7/counter/counter.go)|Byte Counter, Word Counter, Line Counter implementation satisfied to Writer Interface|
 
