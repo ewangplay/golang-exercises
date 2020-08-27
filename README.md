@@ -24,6 +24,7 @@
 |018|[net-context](./018-net-context/with_cancel.go)|net context with cancel / deadline / timeout samples|
 |019|[map-assert](./019-map-assert/map_assert.go)|map assertion sample|
 |020|[goroutine-pool](./020-goroutine-pool/goroutine_pool.go)|goroutine pool sample|
+|021|[unnamed-struct](./021-unnamed-struct/unnamed_struct.go)|unnamed struct type sample|
 
 ## PKG Exercises
 |PKG Sample|Description|
@@ -58,6 +59,6 @@
 
 |Chaper|Topic|Description|
 |----|----|----|
+|ch6|[intlist](./gopl/ch6/intlist/intlist.go)|A linked list of integers sample|
 |ch6|[intset](./gopl/ch6/intset/intset.go)|A non-negativ integer set sample|
 |ch7|[counter](./gopl/ch7/counter/counter.go)|Byte Counter, Word Counter, Line Counter implementation satisfied to Writer Interface|
-
