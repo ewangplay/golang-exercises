@@ -42,6 +42,7 @@
 |[fabcar](./pkgs/fabcar/fabcar.go)|Hyperledger Fabric v2.2 Fabcar Sample|
 |[bccsp](./pkgs/bccsp/bccsp.go)|Hyperledger fabric bccsp package sample|
 |[msp](./pkgs/msp/msp.go)|Hyperledger fabric-sdk-go msp package sample|
+|[rwriter](./pkgs/rwriter/main.go)|RotateWriter package sample|
 
 ## Learning Go
 
