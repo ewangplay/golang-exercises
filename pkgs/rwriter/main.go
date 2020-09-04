@@ -1,8 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
+	"os"
+	"strings"
 
 	"github.com/ewangplay/rwriter"
 )
@@ -11,18 +15,29 @@ func main() {
 	var err error
 	var w io.Writer
 
-	cfg := &rwriter.RotateWriterConfig{
-		Module: "test",
+	cfg := &rwriter.Config{
+		Module: "kitty",
 		Path:   ".",
 	}
 	w, err = rwriter.NewRotateWriter(cfg)
 	if err != nil {
-		log.Printf("Create rotate writer failed: %v\n", err)
-		return
+		fmt.Printf("Create rotate writer failed: %v\n", err)
+		os.Exit(1)
 	}
 
 	log.SetOutput(w)
-	log.SetPrefix("HelloKitty ")
-	log.SetFlags(log.Lshortfile | log.LstdFlags)
-	log.Println("Hello, rotate writer!")
+	msg := "Hello, rotate writer!"
+	log.Println(msg)
+
+	filename := "kitty.log"
+	content, err := ioutil.ReadFile(filename)
+	if err != nil {
+		fmt.Printf("Read log file failed: %v\n", err)
+		os.Exit(1)
+	}
+	if !strings.Contains(string(content), msg) {
+		fmt.Printf("The log file %s should contains '%s'", filename, msg)
+		os.Exit(1)
+	}
+	os.Remove(filename)
 }
