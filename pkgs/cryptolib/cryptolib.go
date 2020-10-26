@@ -4,20 +4,20 @@ import (
 	"fmt"
 	"os"
 
-	ch "github.com/ewangplay/cryptohub"
+	cl "github.com/ewangplay/cryptolib"
 )
 
 func main() {
-	cfg := &ch.Config{
+	cfg := &cl.Config{
 		ProviderName: "SW",
 	}
-	csp, err := ch.GetCSP(cfg)
+	csp, err := cl.GetCSP(cfg)
 	if err != nil {
 		fmt.Printf("Get default CSP failed: %v\n", err)
 		os.Exit(1)
 	}
 
-	k, err := csp.KeyGen(&ch.ED25519KeyGenOpts{})
+	k, err := csp.KeyGen(&cl.ED25519KeyGenOpts{})
 	if err != nil {
 		fmt.Printf("KeyGen failed: %v\n", err)
 		os.Exit(1)
