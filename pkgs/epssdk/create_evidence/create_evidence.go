@@ -14,9 +14,9 @@ import (
 func main() {
 	// 新建客户端
 	opts := &epssdk.Options{
-		AppID:     "2aa321a2-ff9a-4460-a814-3c166e3c66b1",
-		AppKey:    "230af15419b1bd9a2ccf4654b04f9c36f517181f1afa33656100e390db54c52c",
-		AppSecret: "513b6cc2c36ee88900cf9bc21c0e1ee42b0b8564734d0cc9bd71e19754898eda230af15419b1bd9a2ccf4654b04f9c36f517181f1afa33656100e390db54c52c",
+		AppID:     "632ed384-0b77-47af-835e-fb2b9b300fbc",
+		AppKey:    "d26da1e334ace0f00d7a2f925d3268263ab4b9fe3107d33be8bc460bfb07da67",
+		AppSecret: "05df6c85f1bda0131f36e2b28ad08ab47e76de32b8dfb6f133638008d6a88153d26da1e334ace0f00d7a2f925d3268263ab4b9fe3107d33be8bc460bfb07da67",
 		Addr:      "127.0.0.1:8888",
 	}
 	c, err := epssdk.NewClient(opts)
@@ -37,6 +37,11 @@ func main() {
 		CollectID: uuid.NewV4().String(),
 		Name:      "张三的劳动合同",
 		Materials: []epssdk.Material{
+			epssdk.Material{
+				ID:            uuid.NewV4().String(),
+				Type:          fileType,
+				ContentBase64: contentBase64,
+			},
 			epssdk.Material{
 				ID:            uuid.NewV4().String(),
 				Type:          fileType,
