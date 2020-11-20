@@ -26,7 +26,7 @@ func main() {
 	}
 
 	// 读取测试文件
-	contentBase64, fileType, err := readTestFile("files/test1.pdf")
+	contentBase64, fileType, err := readTestFile("../files/test1.pdf")
 	if err != nil {
 		fmt.Printf("Read test file failed: %v\n", err)
 		os.Exit(1)

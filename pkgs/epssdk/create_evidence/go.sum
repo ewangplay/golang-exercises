@@ -1,13 +1,11 @@
 github.com/ewangplay/cryptolib v0.2.1 h1:Hlr4m/nex6KjEXTYR1eUpd9z2OiX7jqOYGH6rbienBU=
 github.com/ewangplay/cryptolib v0.2.1/go.mod h1:j3QTwrnWWve5WbXyvFk+zKDc2I+0qFCJssGgRiwAJXY=
-github.com/gfacloud/gfa-eps-sdk-go v0.0.0-20201029021924-7e8d51b670a2 h1:Ep07HCb8JylPLtVRwnAxxox6oqVjf/iZGNJSFEqB9n0=
-github.com/gfacloud/gfa-eps-sdk-go v0.0.0-20201029021924-7e8d51b670a2/go.mod h1:8M814e048vP3nSRvhtNjO0tjgTiu12KdeqcAhEvzc2g=
+github.com/gfacloud/gfa-eps-sdk-go v0.0.0-20201111032058-32439fd5a551 h1:Otres9UFbkIYV3yhjxJH7GcWNwS+sjTiaPrCQJ6idLQ=
+github.com/gfacloud/gfa-eps-sdk-go v0.0.0-20201111032058-32439fd5a551/go.mod h1:8M814e048vP3nSRvhtNjO0tjgTiu12KdeqcAhEvzc2g=
 github.com/go-resty/resty/v2 v2.3.0 h1:JOOeAvjSlapTT92p8xiS19Zxev1neGikoHsXJeOq8So=
 github.com/go-resty/resty/v2 v2.3.0/go.mod h1:UpN9CgLZNsv4e9XG50UU8xdI0F43UQ4HmxLBDwaroHU=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
-github.com/kr/text v0.1.0 h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
-github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e h1:fD57ERR4JtEqsWbfPhv4DMiApHyliiK5xCTNVSPiaAs=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
 github.com/satori/go.uuid v1.2.0 h1:0uYX9dsZ2yD7q2RtLRtPSdGDWzjeM3TbMJP9utgA0ww=
 github.com/satori/go.uuid v1.2.0/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
@@ -17,5 +15,4 @@ golang.org/x/net v0.0.0-20200513185701-a91f0712d120/go.mod h1:qpuaurCH72eLCgpAm/
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20200323222414-85ca7c5b95cd/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
-gopkg.in/check.v1 v1.0.0-20200902074654-038fdea0a05b h1:QRR6H1YWRnHb4Y/HeNFCTJLFVxaq6wH4YuVdsUOr75U=
 gopkg.in/check.v1 v1.0.0-20200902074654-038fdea0a05b/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
