@@ -5,4 +5,5 @@ cscope.*
 *.class
 */bin/*
 */pkg/*
+*.pem
 
