@@ -27,22 +27,31 @@
 |021|[unnamed-struct](./021-unnamed-struct/unnamed_struct.go)|unnamed struct type sample|
 
 ## PKG Exercises
-|PKG Sample|Description|
+|PKG|Sample|Description|
 |----|----|----|
-|[amqp-simple-mode](./pkgs/amqp/01-simple-mode/)|amqp simple mode sample|
-|[amqp-work-queue-mode](./pkgs/amqp/02-work-queues/)|amqp work queue mode sample|
-|[amqp-fanout-mode](./pkgs/amqp/03-fanout/)|amqp fanout mode sample|
-|[amqp-direct-route-mode](./pkgs/amqp/04-direct-route/)|amqp direct route mode sample|
-|[amqp-topic-route-mode](./pkgs/amqp/05-topic-route/)|amqp topic route mode sample|
-|[amqp-rpc-mode](./pkgs/amqp/06-rpc-demo/)|amqp rpc mode sample|
-|[base64](./pkgs/base64/)|base64 encoding/decoding sample|
-|[regexp](./pkgs/regexp/main.geo)|regular expression sample|
-|[xml](./pkgs/xml/main.go)|xml decoding sample|
-|[sego](./pkgs/sego/main.go)|sego word segment sample|
-|[fabcar](./pkgs/fabcar/fabcar.go)|Hyperledger Fabric v2.2 Fabcar Sample|
-|[bccsp](./pkgs/bccsp/bccsp.go)|Hyperledger fabric bccsp package sample|
-|[msp](./pkgs/msp/msp.go)|Hyperledger fabric-sdk-go msp package sample|
-|[rwriter](./pkgs/rwriter/main.go)|RotateWriter package sample|
+|[amqp](https://github.com/streadway/amqp)|[amqp-simple-mode](./pkgs/amqp/01-simple-mode/)|amqp simple mode sample|
+|[amqp](https://github.com/streadway/amqp)|[amqp-work-queue-mode](./pkgs/amqp/02-work-queues/)|amqp work queue mode sample|
+|[amqp](https://github.com/streadway/amqp)|[amqp-fanout-mode](./pkgs/amqp/03-fanout/)|amqp fanout mode sample|
+|[amqp](https://github.com/streadway/amqp)|[amqp-direct-route-mode](./pkgs/amqp/04-direct-route/)|amqp direct route mode sample|
+|[amqp](https://github.com/streadway/amqp)|[amqp-topic-route-mode](./pkgs/amqp/05-topic-route/)|amqp topic route mode sample|
+|[amqp](https://github.com/streadway/amqp)|[amqp-rpc-mode](./pkgs/amqp/06-rpc-demo/)|amqp rpc mode sample|
+|encoding/base64|[base64](./pkgs/base64/)|base64 encoding/decoding sample|
+|regexp|[regexp](./pkgs/regexp/)|regular expression sample|
+|encoding/xml|[xml](./pkgs/xml/)|xml decoding sample|
+|[sego](https://github.com/huichen/sego)|[sego](./pkgs/sego/)|sego word segment sample|
+|fabcar|[fabcar](./pkgs/fabcar/)|Hyperledger fabric v2.2 fabcar chaincode invoking sample|
+|[bccsp](https://github.com/hyperledger/fabric/bccsp)|[bccsp](./pkgs/bccsp/)|Hyperledger fabric bccsp package sample|
+|[bcmsp](https://github.com/hyperledger/fabric-sdk-go/pkg/client/msp)|[msp](./pkgs/bcmsp/)|Hyperledger fabric-sdk-go msp package sample|
+|[rwriter](https://github.com/ewangplay/rwriter)|[rwriter](./pkgs/rwriter/)|Rotate writer rwriter package sample|
+|[cryptolib](https://github.com/ewangplay/cryptolib)|[cryptolib](./pkgs/cryptolib/)|common cryptographical library cryptolib package sample|
+|[did wallet](https://github.com/ewangplay/did-wallet)|[did-wallet](./pkgs/did-wallet/)|did wallet package sample|
+|[elastic](https://github.com/olivere/elastic/v7)|[elastic](./pkgs/elastic/)|elastic search sdk v7 package sample|
+|[gfa-eps-sdk-go](https://github.com/gfacloud/gfa-eps-sdk-go)|[epssdk](./pkgs/epssdk/)|gfa eps service sdk package sample|
+|[gfa-eps-sdk-go](https://github.com/gfacloud/gfa-eps-sdk-go)|[epssdk](./pkgs/epssdk/)|gfa eps service sdk package sample|
+|[pkcs11](https://github.com/miekg/pkcs11)|[pkcs11](./pkgs/pkcs11/)|pkcs11 package testing with SoftHSM2 sample|
+|[pkcs12](https://golang.org/x/crypto/pkcs12)|[pkcs12](./pkgs/pkcs12/)|pkcs12 package sample|
+|tls|[tls](./pkgs/tls/)|TLS certificate and connection related sample|
+
 
 ## Learning Go
 
