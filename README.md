@@ -25,6 +25,7 @@
 |019|[map-assert](./019-map-assert/map_assert.go)|map assertion sample|
 |020|[goroutine-pool](./020-goroutine-pool/goroutine_pool.go)|goroutine pool sample|
 |021|[unnamed-struct](./021-unnamed-struct/unnamed_struct.go)|unnamed struct type sample|
+|022|[generics](./022-generics/generics.go)|generics sample|
 
 ## PKG Exercises
 |PKG|Sample|Description|
