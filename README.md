@@ -52,6 +52,7 @@
 |[pkcs11](https://github.com/miekg/pkcs11)|[pkcs11](./pkgs/pkcs11/)|pkcs11 package testing with SoftHSM2 sample|
 |[pkcs12](https://golang.org/x/crypto/pkcs12)|[pkcs12](./pkgs/pkcs12/)|pkcs12 package sample|
 |tls|[tls](./pkgs/tls/)|TLS certificate and connection related sample|
+|[gokv](https://github.com/philippgille/gokv)|[gokv](./pkgs/gokv/)|gokv package sample|
 
 
 ## Learning Go
