@@ -53,6 +53,7 @@
 |[pkcs12](https://golang.org/x/crypto/pkcs12)|[pkcs12](./pkgs/pkcs12/)|pkcs12 package sample|
 |tls|[tls](./pkgs/tls/)|TLS certificate and connection related sample|
 |[gokv](https://github.com/philippgille/gokv)|[gokv](./pkgs/gokv/)|gokv package sample|
+|[qsign](https://github.com/jerray/qsign|[qsign](./pkgs/qsign/)|qsign package sample|
 
 
 ## Learning Go
