@@ -192,23 +192,47 @@ func (g *Game) updateEnemyTanks() error {
 			g.enemyTanks[i].directionChanged = false
 		}
 
+		var newX, newY = g.enemyTanks[i].x, g.enemyTanks[i].y
+
 		switch g.enemyTanks[i].direction {
 		case 0:
 			if g.enemyTanks[i].y > 0 {
-				g.enemyTanks[i].y -= tankSpeed
+				newY -= tankSpeed
 			}
 		case 1:
 			if g.enemyTanks[i].x < screenWidth-20 {
-				g.enemyTanks[i].x += tankSpeed
+				newX += tankSpeed
 			}
 		case 2:
 			if g.enemyTanks[i].y < screenHeight-20 {
-				g.enemyTanks[i].y += tankSpeed
+				newY += tankSpeed
 			}
 		case 3:
 			if g.enemyTanks[i].x > 0 {
-				g.enemyTanks[i].x -= tankSpeed
+				newX -= tankSpeed
 			}
+		}
+
+		// 检测与玩家坦克的碰撞
+		collision := false
+		if g.playerTank != nil {
+			if checkCollision(newX, newY, 20, 20, g.playerTank.x, g.playerTank.y, 20, 20) {
+				collision = true
+			}
+		}
+
+		// 检测与墙的碰撞
+		for _, wall := range g.walls {
+			if checkCollision(newX, newY, 20, 20, wall.x, wall.y, wall.width, wall.height) {
+				collision = true
+				break
+			}
+		}
+
+		// 如果没有碰撞，更新敌人坦克位置
+		if !collision {
+			g.enemyTanks[i].x = newX
+			g.enemyTanks[i].y = newY
 		}
 
 		// 简单的随机射击逻辑
