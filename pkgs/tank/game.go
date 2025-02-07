@@ -60,7 +60,7 @@ func NewGame() *Game {
 			{x: 150, y: 150, width: 100, height: 10, health: 3},
 			{x: 250, y: 280, width: 150, height: 10, health: 3},
 			{x: 400, y: 50, width: 10, height: 100, health: 3},
-			{x: 350, y: 300, width: 10, height: 50, health: 3},
+			{x: 350, y: 350, width: 10, height: 50, health: 3},
 		},
 	}
 }
@@ -145,6 +145,9 @@ func (g *Game) updatePlayerBullets() error {
 
 		// 检测玩家子弹与敌方坦克的碰撞
 		for j := 0; j < len(g.enemyTanks); j++ {
+			if i < 0 {
+				break
+			}
 			if checkCollision(g.playerBullets[i].x, g.playerBullets[i].y, 5, 5, g.enemyTanks[j].x, g.enemyTanks[j].y, 20, 20) {
 				// 移除敌方坦克
 				g.enemyTanks = append(g.enemyTanks[:j], g.enemyTanks[j+1:]...)
@@ -157,21 +160,37 @@ func (g *Game) updatePlayerBullets() error {
 
 		// 检测玩家子弹与墙的碰撞
 		for j := 0; j < len(g.walls); j++ {
-			if i > 0 && i < len(g.playerBullets) {
-				if checkCollision(g.playerBullets[i].x, g.playerBullets[i].y, 5, 5, g.walls[j].x, g.walls[j].y, g.walls[j].width, g.walls[j].height) {
-					g.walls[j].health--
-					if g.walls[j].health <= 0 {
-						g.walls = append(g.walls[:j], g.walls[j+1:]...)
-					}
-					g.playerBullets = append(g.playerBullets[:i], g.playerBullets[i+1:]...)
-					i--
-					break
+			if i < 0 {
+				break
+			}
+			if checkCollision(g.playerBullets[i].x, g.playerBullets[i].y, 5, 5, g.walls[j].x, g.walls[j].y, g.walls[j].width, g.walls[j].height) {
+				g.walls[j].health--
+				if g.walls[j].health <= 0 {
+					g.walls = append(g.walls[:j], g.walls[j+1:]...)
 				}
+				g.playerBullets = append(g.playerBullets[:i], g.playerBullets[i+1:]...)
+				i--
+				break
+			}
+		}
+
+		// 检测玩家子弹与敌方子弹的碰撞
+		for j := 0; j < len(g.enemyBullets); j++ {
+			if i < 0 {
+				break
+			}
+			if checkCollision(g.playerBullets[i].x, g.playerBullets[i].y, 5, 5, g.enemyBullets[j].x, g.enemyBullets[j].y, 5, 5) {
+				// 移除敌方子弹
+				g.enemyBullets = append(g.enemyBullets[:j], g.enemyBullets[j+1:]...)
+				// 移除玩家子弹
+				g.playerBullets = append(g.playerBullets[:i], g.playerBullets[i+1:]...)
+				i--
+				break
 			}
 		}
 
 		// 移除超出屏幕的子弹
-		if i > 0 && i < len(g.playerBullets) {
+		if i >= 0 && i < len(g.playerBullets) {
 			if g.playerBullets[i].x < 0 || g.playerBullets[i].x > screenWidth || g.playerBullets[i].y < 0 || g.playerBullets[i].y > screenHeight {
 				g.playerBullets = append(g.playerBullets[:i], g.playerBullets[i+1:]...)
 				i--
@@ -279,6 +298,9 @@ func (g *Game) updateEnemyBullets() error {
 
 		// 检测子弹与墙的碰撞
 		for j := 0; j < len(g.walls); j++ {
+			if i < 0 {
+				break
+			}
 			if checkCollision(g.enemyBullets[i].x, g.enemyBullets[i].y, 5, 5, g.walls[j].x, g.walls[j].y, g.walls[j].width, g.walls[j].height) {
 				g.walls[j].health--
 				if g.walls[j].health <= 0 {
@@ -291,7 +313,7 @@ func (g *Game) updateEnemyBullets() error {
 		}
 
 		// 移除超出屏幕的子弹
-		if i > 0 && i < len(g.enemyBullets) {
+		if i >= 0 && i < len(g.enemyBullets) {
 			if g.enemyBullets[i].x < 0 || g.enemyBullets[i].x > screenWidth || g.enemyBullets[i].y < 0 || g.enemyBullets[i].y > screenHeight {
 				g.enemyBullets = append(g.enemyBullets[:i], g.enemyBullets[i+1:]...)
 				i--
