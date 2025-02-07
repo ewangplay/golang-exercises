@@ -217,18 +217,26 @@ func (g *Game) updateEnemyTanks() error {
 		case 0:
 			if g.enemyTanks[i].y > 0 {
 				newY -= tankSpeed
+			} else {
+				g.enemyTanks[i].direction = rand.Intn(4)
 			}
 		case 1:
 			if g.enemyTanks[i].x < screenWidth-20 {
 				newX += tankSpeed
+			} else {
+				g.enemyTanks[i].direction = rand.Intn(4)
 			}
 		case 2:
 			if g.enemyTanks[i].y < screenHeight-20 {
 				newY += tankSpeed
+			} else {
+				g.enemyTanks[i].direction = rand.Intn(4)
 			}
 		case 3:
 			if g.enemyTanks[i].x > 0 {
 				newX -= tankSpeed
+			} else {
+				g.enemyTanks[i].direction = rand.Intn(4)
 			}
 		}
 
@@ -244,6 +252,17 @@ func (g *Game) updateEnemyTanks() error {
 		for _, wall := range g.walls {
 			if checkCollision(newX, newY, 20, 20, wall.x, wall.y, wall.width, wall.height) {
 				collision = true
+				// 改变行进方向，跟原先的方向相反
+				switch g.enemyTanks[i].direction {
+				case 0:
+					g.enemyTanks[i].direction = 2
+				case 1:
+					g.enemyTanks[i].direction = 3
+				case 2:
+					g.enemyTanks[i].direction = 0
+				case 3:
+					g.enemyTanks[i].direction = 1
+				}
 				break
 			}
 		}
