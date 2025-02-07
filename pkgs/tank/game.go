@@ -58,7 +58,7 @@ func NewGame() *Game {
 		enemyBullets: []Bullet{},
 		walls: []Wall{
 			{x: 150, y: 150, width: 100, height: 10, health: 3},
-			{x: 250, y: 250, width: 150, height: 10, health: 3},
+			{x: 250, y: 280, width: 150, height: 10, health: 3},
 			{x: 400, y: 50, width: 10, height: 100, health: 3},
 			{x: 350, y: 300, width: 10, height: 50, health: 3},
 		},
@@ -68,26 +68,51 @@ func NewGame() *Game {
 func (g *Game) updatePlayerTank() error {
 	if g.playerTank != nil {
 		// 处理坦克移动
+		var newX, newY = g.playerTank.x, g.playerTank.y
+
 		if ebiten.IsKeyPressed(ebiten.KeyUp) {
 			g.playerTank.direction = 0
 			if g.playerTank.y > 0 {
-				g.playerTank.y -= tankSpeed
+				newY -= tankSpeed
 			}
 		} else if ebiten.IsKeyPressed(ebiten.KeyRight) {
 			g.playerTank.direction = 1
 			if g.playerTank.x < screenWidth-20 {
-				g.playerTank.x += tankSpeed
+				newX += tankSpeed
 			}
 		} else if ebiten.IsKeyPressed(ebiten.KeyDown) {
 			g.playerTank.direction = 2
 			if g.playerTank.y < screenHeight-20 {
-				g.playerTank.y += tankSpeed
+				newY += tankSpeed
 			}
 		} else if ebiten.IsKeyPressed(ebiten.KeyLeft) {
 			g.playerTank.direction = 3
 			if g.playerTank.x > 0 {
-				g.playerTank.x -= tankSpeed
+				newX -= tankSpeed
 			}
+		}
+
+		// 检测与敌方坦克的碰撞
+		collision := false
+		for _, enemyTank := range g.enemyTanks {
+			if checkCollision(newX, newY, 20, 20, enemyTank.x, enemyTank.y, 20, 20) {
+				collision = true
+				break
+			}
+		}
+
+		// 检测与墙的碰撞
+		for _, wall := range g.walls {
+			if checkCollision(newX, newY, 20, 20, wall.x, wall.y, wall.width, wall.height) {
+				collision = true
+				break
+			}
+		}
+
+		// 如果没有碰撞，更新坦克位置
+		if !collision {
+			g.playerTank.x = newX
+			g.playerTank.y = newY
 		}
 
 		// 处理射击
